@@ -1,7 +1,7 @@
-// const title  = document.getElementById("title")
-// // document.title = "hi from JS";
-// console.dir(title);
-// title.innerText = "Got you !"
+// const h1  = document.getElementById("h1")
+// // document.h1 = "hi from JS";
+// console.dir(h1);
+// h1.innerText = "Got you !"
 
 
 
@@ -46,25 +46,52 @@
 
 
 
-const title = document.querySelector(".hello:first-child h1"); 
+const h1 = document.querySelector("div.hello:first-child h1"); 
 
 
-console.dir(title);
+console.dir(h1);
 
-function handleTitleClick(){
-    console.log("title was clicked");
-    title.style.color = "Blue";
+function handleh1Click(){
+  h1.classList.toggle("clicked")
+   
+    
+   
 }
+h1.addEventListener("click", handleh1Click)
 
-function handleMouseEnter(){
-    title.innerText =  "mouse is here"
-}
+// function handleMouseEnter(){
+//     h1.innerText =  "mouse is here";
+    
+// }
 
-function handleMouseLeave(){
-    title.innerText = "mouse is gone";
-}
+// function handleMouseLeave(){
+//     h1.innerText = "mouse is gone";
+// }
 
-title.addEventListener("click",handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
+// h1.addEventListener("mouseenter", handleMouseEnter);
 
-title.addEventListener("mouseleave",handleMouseLeave)
+// h1.addEventListener("mouseleave",handleMouseLeave)
+
+
+// function handleWindowResize(){
+//     document.body.style.backgroundColor = "tomato";
+// }
+
+
+// function handleWindowCopy(){
+//     alert("copied!")
+// }
+
+// function handleWindowOffline(){
+//     alert("no wifi !!")
+// }
+
+// function handleWindowOnline(){
+//     alert (" wifi  connnected!!")
+// }
+
+// window.addEventListener("resize",handleWindowResize);
+// window.addEventListener("copy", handleWindowCopy);
+
+// window.addEventListener("offline", handleWindowOffline);
+// window.addEventListener("online", handleWindowOnline);
