@@ -10,10 +10,10 @@ const greeting = document.querySelector('#greeting');
 function onLoginSubmit(event) {
   //this stops the default behaviour any event from happening.
   event.preventDefault();
+  loginForm.classList.add(HIDDEN_CLASSNAME);
   const userName = loginInput.value;
   console.log(userName);
   localStorage.setItem(USERNAME_KEY, userName);
-  loginForm.classList.add(HIDDEN_CLASSNAME);
   paintGreetings(userName);
 
   //js will give the event that just happened as the first argument.
@@ -25,7 +25,10 @@ function paintGreetings(username) {
   greeting.innerText = `hello ${username}`;
 }
 
+
 const savedUserName = localStorage.getItem(USERNAME_KEY);
+
+//============> Start of code <=============
 if (savedUserName === null) {
   //show the form
   loginForm.classList.remove(HIDDEN_CLASSNAME);
